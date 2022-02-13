@@ -1,33 +1,221 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>account</title>
+    <title>Simpli Savings</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="stats.css" />
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
+
   <body>
     <!--navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Simpli Saving</a>
+    <!--navbar icon-->
+    <ul class="nav justify-content-left" style="padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+">
+			<a href="index.html" class="brand-logo">
+				<img src="images/lightbulb-logo.png" alt="logo" width="40" height="40">
+    <!--end of navbar icon-->
+    </a><a class="navbar-brand" href="#" style="color: white">Simpli Savings</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        <a class="nav-link" href="#why-save">Why we Save</a>
-        <a class="nav-link" href="#how-save">How to Save</a>
-        <a class="nav-link" href="#how-use">How to use Website</a>
-        <a class="nav-link" href="login.html">Login</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; height: 100%;">
+      <ul class="nav justify-content-around" style="margin-top: 0px; margin-bottom: 0px; padding-bottom: 0px; padding-top: 0px; height: 100%;">
+        <li><a class="nav-link active" aria-current="page" href="index.html" style="color: white; height: 100%;">Home</a></li>
+        <li><a class="nav-link" href="#last-month-bill" style="color: white; height: 100%;">Last Month Bill</a></li>
+        <li><a class="nav-link" href="#this-month-saved" style="color: white; height: 100%;">This Month Saved</a></li>
+        <li><a class="nav-link" href="#total-points" style="color: white; height: 100%;">Total Points</a></li>
+        <li><a class="nav-link" href="#rewards" style="color: white; height: 100%;">Rewards</a></li>
+      </ul>
+    </div>
+  </ul></div>
+</nav>
+
+<div class="container"><div class="jumbotron"><div class="jumbo-page-title"><h1><center>Account and Rewards</center></h1></div></div></div>
+<br>
+
+<div id="last-month-bill">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="jumbo-title"><h2 ><center>Last Month Bill Amount</center> </h2></div>
+      <center><h3 id="previousBill"></h3></center>
+    </div>
+  </div>
+</div>
+
+<br>
+<div id="this-month-saved">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="jumbo-title"><h2><center>This Month You Saved</center></h2></div>
+      <center><h3 id="youSaved"></h3></center>
+    </div>
+  </div>
+</div>
+
+<br>
+<div id="total-points">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="jumbo-title"><h2><center>Total Points</center></h2></div>
+      <div class="result">
+      <center><h3 id="totalPoints"></h3><br><h3>30 points = $1 </h3></center>
       </div>
     </div>
   </div>
-</nav>
+</div>
+
+<br>
+<div class="jumbotron" id="rewards">
+  <div class="container" id="rewards">
+    <div class="jumbo-title"> <h1><center>Rewards:</center></h1></div><br>
+
+    <!--cards-->
+    <div class="cards">
+
+      <!--1-->
+      <div class="container">
+        <div class="row">
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/BackPack.png" class="card-img-top" alt="Backpack">
+            <div class="card-body">
+              <h3 class="card-title">Backpack</h3>
+              <p class="card-text">A high quality eco-friendly backpack. <br><h4><center>Original: $40.00</center></h4></p>
+              <br>
+              <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="backpackPercent"></span>% off!<br><br>New Price: $<span id="backpackNew"></span></h4></a></center>
+            </div>
+          </div>
+
+      <!--2-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Blanket.png" class="card-img-top" alt="Blanket">
+            <div class="card-body">
+              <h3 class="card-title">Blanket</h3>
+              <p class="card-text">A nice warm, fluffy, and most importantly eco friendly blanket.<br><h4><center>Original: $20.00</center></h4></p><br>
+             <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="blanketPercent"></span>% off!<br><br>New Price: $<span id="blanketNew"></span></h4></a></center>
+            </div>
+          </div>
+
+        <!--3-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Kayak.jpg" class="card-img-top" alt="Kayak">
+            <div class="card-body">
+              <h3 class="card-title">Kayak</h3>
+              <p class="card-text">A free day out on the lake in a kayak. <br><h4><center>Original: $20.00</center></h4></p><br>
+              <center><span><a href="" class="btn btn-primary"><h4>Use your points for <span id="kayakPercent"></span>% off!<br><br>New Price: $<span id="kayakNew"></span></h4></a></center>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-    <p id="previousBill"></p>
-    <p id="pointsEarned"></p>
-    <script src="script.js">
-    </script>
+    <!--4-->
+      <div class="container">
+        <div class="row">
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Plant.png" class="card-img-top" alt="Plant">
+            <div class="card-body">
+              <h3 class="card-title">Plant</h3>
+              <p class="card-text">Make your house nice and beautiful with a nice house plant.<br><h4><center>Original: $7.00</center></h4></p><br>
+              <center><span><a href="" class="btn btn-primary"><h4>Use your points for <span id="plantPercent"></span>% off!<br><br>New Price: $<span id="plantNew"></span></h4></a></center>
+            </div>
+          </div>
+
+      <!--5-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Solar.png" class="card-img-top" alt="Solar">
+            <div class="card-body">
+              <h3 class="card-title">Solar Light</h3>
+              <p class="card-text">Get solar lights to make your yard look stylish, all while helping the environment.<br><h4><center>Original: $10.00</center></h4>
+              </p>
+              <center><span><a href="" class="btn btn-primary"><h4>Use your points for <span id="solarPercent"></span>% off!<br><br>New Price: $<span id="solarNew"></span></h4></a></center>
+            </div>
+          </div>
+
+      <!--6-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Starbucks.png" class="card-img-top" alt="Starbucks">
+            <div class="card-body">
+              <h3 class="card-title">Starbucks</h3>
+              <p class="card-text">A fifteen dollar gift card for all you Starbucks lovers.<br><h4><center>Original: $15<span="starbucksDollars"></span></center></h4></p><br>
+              <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="starbucksPercent"></span>% off!<br><br>New Price: $<span id="starbucksNew"></span></h4></a></center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--7-->
+      <div class="container">
+        <div class="row">
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Water.png" class="card-img-top" alt="Water">
+            <div class="card-body">
+              <h3 class="card-title">Water Bottle</h3>
+              <p class="card-text">Water is the most important natural resource in the world. Let's help keep it clean!<h4><center>Original: $28.00</center></h4></p>
+              <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="waterPercent"></span>% off!<br><br>New Price: $<span id="waterNew"></span></h4></a></center>
+            </div>
+          </div>
+
+      <!--8-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Sapling.jpg" class="card-img-top" alt="Sapling">
+            <div class="card-body">
+              <h3 class="card-title">Tree Sapling</h3>
+              <p class="card-text">With this in a couple of years you have shade and less Co2 in your backyard.<h4><center>Original: $5.00</center></h4></p>
+              <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="treePercent"></span>% off!<br><br>New Price: $<span id="treeNew"></span></h4></a></center>
+            </div>
+          </div>
+
+      <!--9-->
+          <div class="card col-sm" style="width: 24em;">
+            <img src="reward-images/Chicken.jpg" class="card-img-top" alt="Chicken-Sandwich">
+            <div class="card-body">
+              <h3 class="card-title">Chick-fil-a</h3>
+              <p class="card-text">A fifteen dollar gift card for all you Chick-fil-a lovers. <h4><center>Original: $15.00</center></h4></p><br><br>
+              <center><a href="" class="btn btn-primary"><h4>Use your points for <span id="chickPercent"></span>% off!<br><br>New Price: $<span id="chickNew"></span></h4></a></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--grid-->
+
+
+
+    <!--Footer-->
+<div class="footer">
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3 text-light" style="background-color:#345E8E">
+    © 2022 Copyright: All Rights Reserved.
+    <a class="text-light" href="https://github.com/8honeydew/Unihacks-Simpli-Savings">Our Github Repository</a>
+  </div>
+</div>
+  <!-- Copyright -->
+</footer>
+  <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

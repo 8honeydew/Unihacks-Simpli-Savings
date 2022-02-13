@@ -1,15 +1,44 @@
-.how-save  {
- background-color: #7CE577;
+body {
+  background-image:url(https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlZW58ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
 }
 
-.footer{
+.container-fluid {
+  background-color: #345E8E;
+};
+
+.container {
+  background-color: #E3ECE0;
+}
+
+.jumbotron {
+  background-color: #E3ECE0 !important;
+}
+
+.jumbo-title {
+  background-color: rgb(182, 208, 214);
+  height: 60px;
+  border: 2px solid black;
+  margin-bottom: 40px;
+  border-radius:10px;
 
 }
 
-p {
-  
+
+
+.carousel-inner > .carousel-item > div > img {
+  max-height: 500px;
+  max-width: 500px;
+  align-self: center;
 }
 
-.navbar navbar-expand-lg navbar-light bg-light{
-  background-color: #044389;
+.footer > footer{
+  background-color:#345E8E;
 }
+

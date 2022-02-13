@@ -1,0 +1,78 @@
+body {
+  background-image:url(https://images.unsplash.com/photo-1621788051568-dd6bbe1f2f5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.container-fluid {
+  background-color: #345E8E;
+  
+};
+
+.container {
+  background-color: #E3ECE0;
+}
+
+.jumbotron {
+  background-color: #E3ECE0 !important;
+  border: 1px solid black;
+
+}
+
+.jumbo-title {
+  background-color: fff;
+  font-family: Verdana, Arial, sans-serif;;
+  height: 60px;
+  /*border: 2px solid black;*/
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: rgb(0, 153, 33);
+  font-weight: bold;
+  border-radius:10px;
+
+}
+
+.jumbo-page-title h2  {
+  height: 0px;
+  /*border: 1px solid black;*/
+  margin-bottom: 10px;
+  margin-top: 10px;
+ background-color: #E3ECE0 !important;
+}
+
+h2 center {
+  font-size: 30px;
+}
+
+.card > img{
+  padding: 25px;
+}
+
+.col-sm {
+  margin: 20px;
+
+}
+
+img {
+  align-self: center;
+}
+
+/*
+.jumbo-page-title{
+  margin: 5px;
+  overflow: auto;
+}
+*/
+
+.card-title{
+  font-weight:bold;
+}
+
+.footer > footer{
+  background-color:#345E8E;
+}
